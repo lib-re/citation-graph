@@ -1,0 +1,22 @@
+{
+  "name": "citation-graph",
+  "description": "explore the incoming and outgoing citations for a given doi",
+  "main": "src/index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "es-dev-server": "^1.40.0"
+  },
+  "scripts": {
+    "start": "es-dev-server --watch ./index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lib-re/citation-graph.git"
+  },
+  "author": "atla5",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lib-re/citation-graph/issues"
+  },
+  "homepage": "https://github.com/lib-re/citation-graph#readme"
+}

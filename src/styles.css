@@ -1,0 +1,30 @@
+main { 
+  width: 100%; 
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bordered, main > section, div.secondary-nav { 
+  border: 1px solid darkgrey;
+  border-radius: 5px;
+}
+
+main > section {
+  margin: 20px;
+  padding: 25px;
+}
+
+#incoming ul, #outgoing ul { list-style: none; }
+
+#incoming, #outgoing { background-color: #bbb; }
+#current { 
+  background-color: #ddd; 
+  flex-grow: 4;
+}
+
+nav, footer { 
+  color: white;
+  text-align: center;
+  background-color: black; 
+  padding: 10px;
+}
