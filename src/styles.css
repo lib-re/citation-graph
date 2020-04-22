@@ -1,5 +1,16 @@
+nav, footer { 
+  color: white;
+  text-align: center;
+  background-color: black; 
+  padding: 10px;
+}
+
+div.secondary-nav { 
+  background-color: #eee; 
+  padding: 10px;
+}
+
 main { 
-  width: 100%; 
   display: flex;
   flex-wrap: wrap;
 }
@@ -10,21 +21,22 @@ main {
 }
 
 main > section {
-  margin: 20px;
-  padding: 25px;
+  margin: 10px;
+  padding: 20px;
+  background-color: #bbb; 
 }
 
-#incoming ul, #outgoing ul { list-style: none; }
+#incoming ul, #outgoing ul { 
+  list-style: none; 
+  padding-left: 10px;
+  min-width: 150px;
+  height: 80vh;
+  overflow: scroll;
+}
 
-#incoming, #outgoing { background-color: #bbb; }
 #current { 
   background-color: #ddd; 
   flex-grow: 4;
 }
 
-nav, footer { 
-  color: white;
   text-align: center;
-  background-color: black; 
-  padding: 10px;
-}
