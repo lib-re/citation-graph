@@ -1,0 +1,72 @@
+/* header, footer, and core navigation */
+nav, footer { 
+  color: white;
+  text-align: center;
+  background-color: black; 
+  padding: 10px;
+}
+
+div.secondary-nav { 
+  background-color: #eee; 
+  padding: 10px;
+  text-align: center;
+}
+
+main { 
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bordered, main > section, div.secondary-nav { 
+  border: 1px solid darkgrey;
+  border-radius: 5px;
+}
+
+/* core body */
+main > section {
+  margin: 10px;
+  padding: 20px;
+  background-color: #bbb; 
+}
+
+/* left and right panels */
+#incoming ul, #outgoing ul { 
+  list-style: none; 
+  padding-left: 10px;
+  min-width: 150px;
+  height: 80vh;
+  overflow: scroll;
+}
+
+#current { 
+  background-color: #ddd; 
+  flex-grow: 4;
+}
+
+/* button styling */
+a.btn, button.btn {
+  display: inline-block;
+  text-align: center;
+  margin: var(--padding-small, 5px);
+  padding: var(--padding-small, 5px) var(--padding-medium, 10px);
+  color: var(--color-button-text, white);
+  text-decoration: none;
+  background-color: var(--color-button-background-dark,#1b598c);
+  border: 2px solid var(--color-button-text, white);
+  border-radius: 4px;
+  box-shadow: 0 1px 1px 0 var(--color-secondary-background-dark, rgba(0,0,0,.1));
+}
+a.btn:hover, button.btn:hover { 
+  cursor: pointer;
+  filter: brightness(90%); 
+}
+
+/* unpaywall */
+dl dt { 
+  font-weight: bold;
+  clear:left;
+  float:left;
+  width: 80px;
+}
+dl dd { clear:right; }
+#unpaywall { max-width: 600px; }

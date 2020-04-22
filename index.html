@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Aidan Sawyer">
+  <meta name="description" content="navigate">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Citation Graph</title>
+  <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/22733488">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/atla5/utils/css/variables.css">
+  <link rel="stylesheet" type="text/css" href="./src/styles.css">
+</head>
+
+<body>
+  <script type="module" src="./src/open_citations.js"></script>
+  <script type="module" src="./src/unpaywall.js"></script>
+  <script type="text/javascript">
+    // generic helper function used to grab the data 
+    function getDataFromJSONFileAndCallRenderFunction(data_url, renderFunction) {
+      return fetch(data_url)
+        .then((resp) => resp.json())
+        .then((json) => renderFunction(json))
+        .catch((error) => console.log(error))
+      ;
+    }
+
+    // set shared doi
+    let window_args = window.location.search; 
+    let current_doi = window_args.substring(window_args.indexOf("doi=")+4, window_args.length);
+    if(!current_doi){ current_doi = "10.1177/0165551516650410"; }
+  </script>
+  <nav><h1>Citation Explorer</h1></nav>
+  <div class="secondary-nav">
+    Try out a <a href="?doi=10.1177/0165551516650410">sample doi</a> or enter your own:
+    <form action="/" method="get">
+      <input type="text" name="doi">
+      <button type="submit">submit</button>
+    </form>
+  </div>
+  <main>
+    <section>
+      <h2>Cites:</h2>
+      <div id="incoming"><em>loading incoming...</em></div>
+    </section>
+    <section id="current">
+      <section id="unpaywall"><em>unpaywall...</em></section>
+    </section>
+    <section>
+      <h2>Cited By:</h2>
+      <div id="outgoing"><em>loading outgoing...</em></div>
+    </section>
+  </main>
+  <footer></footer>
+</body>
+
+</html>
