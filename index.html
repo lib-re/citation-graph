@@ -15,6 +15,7 @@
 
 <body>
   <script type="module" src="./src/open_citations.js"></script>
+  <script type="module" src="./src/unpaywall.js"></script>
   <script type="text/javascript">
     // generic helper function used to grab the data 
     function getDataFromJSONFileAndCallRenderFunction(data_url, renderFunction) {
@@ -28,11 +29,11 @@
     // set shared doi
     let window_args = window.location.search; 
     let current_doi = window_args.substring(window_args.indexOf("doi=")+4, window_args.length);
-    if(!current_doi){ current_doi = "10.1002/adfm.201505328"; }
+    if(!current_doi){ current_doi = "10.1177/0165551516650410"; }
   </script>
   <nav><h1>Citation Explorer</h1></nav>
   <div class="secondary-nav">
-    Try out a <a href="?doi=10.1002/adfm.201505328">sample doi</a>
+    Try out a <a href="?doi=10.1177/0165551516650410">sample doi</a>
   </div>
   <main>
     <section>
@@ -40,7 +41,7 @@
       <div id="incoming"><em>loading incoming...</em></div>
     </section>
     <section id="current">
-      <em>COMING SOON</em>
+      <section id="unpaywall"><em>unpaywall...</em></section>
     </section>
     <section>
       <h2>Cited By:</h2>
